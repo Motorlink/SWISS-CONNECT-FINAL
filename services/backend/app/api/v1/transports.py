@@ -1,17 +1,15 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
+from sqlalchemy.orm import Session
+from app.core.database import get_db
 from app.schemas.transport import TransportCreate
+from app.services.transport_service import create_transport, list_transports
 
 router = APIRouter()
-TRANSPORTS = []
 
 @router.get('')
-def list_transports():
-    return TRANSPORTS
+def get_transports(db: Session = Depends(get_db)):
+    return list_transports(db)
 
 @router.post('')
-def create_transport(payload: TransportCreate):
-    item = payload.model_dump()
-    item['id'] = f'TR-{len(TRANSPORTS)+1:04d}'
-    item['status'] = 'pending'
-    TRANSPORTS.append(item)
-    return item
+def post_transport(payload: TransportCreate, db: Session = Depends(get_db)):
+    return create_transport(db, payload)

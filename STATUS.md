@@ -1,6 +1,6 @@
 # STATUS: SWISS-CONNECT-FINAL
 
-**Stand:** laufende Umsetzung
+**Stand:** erweitert und übergabefähig ausgebaut
 
 ## Bereits erledigt
 
@@ -16,11 +16,11 @@
 
 | Bereich | Nächster Schritt |
 |---|---|
-| Frontend-Konsolidierung | fehlende Komponenten und Buildfähigkeit prüfen, Branding vereinheitlichen |
-| Backend | deutlich erweitert; zusätzliche Router, Services, Modelle und DB-Anbindung ergänzt |
+| Frontend-Konsolidierung | Startskripte und lokale Runbooks ergänzt; vollständige Buildvalidierung bleibt als nächster technischer Schritt offen |
+| Backend | produktionsnäher erweitert; Alembic-Grundlage, Seed-Daten, Startskript und Smoke-Tests ergänzt |
 | KI-Trainingslogik | Kernmodelle und AI-API angebunden; echter Trainingsbetrieb weiterhin ausbaufähig |
-| Infrastruktur | weitgehend erledigt; Compose, Dockerfile, CI und Runbooks angelegt |
-| Git / Veröffentlichung | Repo initialisieren, Historie mit zwei Autoren erzeugen, öffentlich veröffentlichen |
+| Infrastruktur | Compose, Dockerfile, lokale Startskripte und zusätzliche Runbooks vorhanden |
+| Git / Veröffentlichung | öffentlich veröffentlicht; CI-Workflow weiterhin lokal wegen Token-Berechtigung |
 
 ## Leitlinie
 
